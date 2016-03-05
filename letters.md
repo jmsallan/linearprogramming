@@ -1,5 +1,7 @@
 #Stacking of graded papers problem
 
+*I would like to thank Wayne Smith for proposing this problem*
+
 Let’s suppose that we have a set of graded papers, which have to be sorted alphabetically to be delivered to students, so that we have a vector *m* of length 26, whose components are equal to the number of papers corresponding to students of the same initial in the family name. We have to stack the papers in *n* bins, so that the number of papers of each bin are as evenly distributed as possible.
 
 A way to tackle this problem using ILP is to minimize the difference between the maximum and minimum number of papers in each bin. Then variables such as x_{ij} can be defined which equal one if students with family name starting with letter *j* go to bin *i* and zero otherwise (so we cannot split papers with the same initial across two bins). Then we have the following sets of constraints:
